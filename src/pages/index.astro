@@ -1,6 +1,10 @@
 ---
+// Import BaseLayout
 import BaseLayout from '../layouts/BaseLayout.astro';
+// Import Header
 import Header from '../layouts/Header.astro';
+// Import GetStuff
+import GetStuff from '../components/GetStuff.astro';
 
 // Import Stylesheet
 import '../styles/global.css';
@@ -14,32 +18,13 @@ const res = await fetch(source);
 const data = await res.json();
 ---
 
-<BaseLayout></BaseLayout>
-		
+<BaseLayout>
+		<Header />
 		
 
 		<main id="content" class="main-area">
 
-			<ul class="cards">
-		  
-				<!-- Your API Data -->
-				{
-					data.map( item =>
-					<li class="card-item">
-						<a href="#">
-							<figure class="card">
-							<img src="https://assets.codepen.io/16425/image-placeholder.png" alt="Placeholder">
-							<figcaption class="caption">
-								<h3 class="caption-title">{item.name}</h3>
-								<p>{item.company.catchPhrase}</p>
-							</figcaption>
-							</figure>
-						</a>
-					</li> 
-					)
-				}
-		  
-			</ul>
+			<GetStuff data={data} /> 
 		  </main>
 		  
 </BaseLayout>

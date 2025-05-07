@@ -3,19 +3,18 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 // Import Header
 import Header from '../layouts/Header.astro';
-// Import GetStuff
-import GetStuff from '../components/GetStuff.astro';
 
 // Import Stylesheet
 import '../styles/global.css';
 
 // data source
-// replace temporary JSON placeholder API
-const source = 'https://jsonplaceholder.typicode.com/users';
+const source = 'https://www.csscolorsapi.com/api/colors';
 // fetch the data
 const res = await fetch(source); 
 // store retreived data
 const data = await res.json();
+
+console.log(data);
 ---
 
 <BaseLayout>
@@ -24,7 +23,17 @@ const data = await res.json();
 
 		<main id="content" class="main-area">
 
-			<GetStuff data={data} /> 
+			<ul class="grid">
+		  
+				<!-- Your API Data -->
+					{data.colors.map(color => 
+					<li>
+						{color.name}
+					</li> 
+					)
+					}
+			
+			</ul>
 		  </main>
 		  
 </BaseLayout>

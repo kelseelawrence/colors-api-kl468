@@ -22,8 +22,10 @@ console.log(data);
 		
 		  
 				<!-- Your API Data -->
-					{data.colors.map(color => 
-					<li>
+					{
+					
+					data.colors.map(color => 
+					<li style={`background: ${color.hex} `}>
 						{color.name}
 					</li> 
 					)

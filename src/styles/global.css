@@ -1,16 +1,30 @@
-/* Normalize CSS */
 
-img {
-  display: block;
-  border: 0;
-  width: 100%;
-  height: auto;
-}
 
 /* Header */
 .masthead {
   text-align: center;
   border-bottom: 1px solid hsl(0, 0%, 90%);
+}
+
+.card-item {
+  width: 300px; 
+  height: 300px; 
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  color: white; 
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2em;
+  justify-content: center;
 }
 
 /*--------------------------------------------------------------
@@ -21,12 +35,6 @@ Cards:
   margin: 0;
   padding: 0;
   list-style-type: none;
-}
-
-.cards a {
-  display: block;
-  margin-bottom: 1em;
-  text-decoration: none;
 }
 
 .caption {

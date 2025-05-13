@@ -20,141 +20,21 @@ console.log(data);
 <BaseLayout>
 		<Header />
 		
+    <main id="content" class="main-area">
+       <div>Color Name</div>
 		  
 				<!-- Your API Data -->
-					{
-					
-					data.colors.map(color => 
-					<li style={`background: ${color.hex} `}>
-						{color.name}
-					</li> 
-					)
+        
+         {
+					data.colors.map(color => (
+					<div class="card-item" style={`background-color: #${color.hex};`}>
+            <h3 class="caption-title">{color.name}</h3>
+					</div> 
+				))
 					}
-			
-			<main id="content" class="main-area">
 
-  <ul class="cards">
-
-    <!-- Repeating Template -->
-    <li class="card-item">
-      <a href="#">
-        <figure class="card">
-          <img src="https://assets.codepen.io/16425/image-placeholder.png" alt="Placeholder">
-          <figcaption class="caption">
-            <h3 class="caption-title">Title</h3>
-            <p>Description Lorem ipsum dolor sit.</p>
-          </figcaption>
-        </figure>
-      </a>
-    </li>
-
-    <!-- Repeating Template -->
-    <li class="card-item">
-      <a href="#">
-        <figure class="card">
-          <img src="https://assets.codepen.io/16425/image-placeholder.png" alt="Placeholder">
-          <figcaption class="caption">
-            <h3 class="caption-title">Title</h3>
-            <p>Description Lorem ipsum dolor sit.</p>
-          </figcaption>
-        </figure>
-      </a>
-    </li>
-
-    <!-- Repeating Template -->
-    <li class="card-item">
-      <a href="#">
-        <figure class="card">
-          <img src="https://assets.codepen.io/16425/image-placeholder.png" alt="Placeholder">
-          <figcaption class="caption">
-            <h3 class="caption-title">Title</h3>
-            <p>Description Lorem ipsum dolor sit.</p>
-          </figcaption>
-        </figure>
-      </a>
-    </li>
-
-    <!-- Repeating Template -->
-    <li class="card-item">
-      <a href="#">
-        <figure class="card">
-          <img src="https://assets.codepen.io/16425/image-placeholder.png" alt="Placeholder">
-          <figcaption class="caption">
-            <h3 class="caption-title">Title</h3>
-            <p>Description Lorem ipsum dolor sit.</p>
-          </figcaption>
-        </figure>
-      </a>
-    </li>
-
-    <!-- Repeating Template -->
-    <li class="card-item">
-      <a href="#">
-        <figure class="card">
-          <img src="https://assets.codepen.io/16425/image-placeholder.png" alt="Placeholder">
-          <figcaption class="caption">
-            <h3 class="caption-title">Title</h3>
-            <p>Description Lorem ipsum dolor sit.</p>
-          </figcaption>
-        </figure>
-      </a>
-    </li>
-
-    <!-- Repeating Template -->
-    <li class="card-item">
-      <a href="#">
-        <figure class="card">
-          <img src="https://assets.codepen.io/16425/image-placeholder.png" alt="Placeholder">
-          <figcaption class="caption">
-            <h3 class="caption-title">Title</h3>
-            <p>Description Lorem ipsum dolor sit.</p>
-          </figcaption>
-        </figure>
-      </a>
-    </li>
-
-    <!-- Repeating Template -->
-    <li class="card-item">
-      <a href="#">
-        <figure class="card">
-          <img src="https://assets.codepen.io/16425/image-placeholder.png" alt="Placeholder">
-          <figcaption class="caption">
-            <h3 class="caption-title">Title</h3>
-            <p>Description Lorem ipsum dolor sit.</p>
-          </figcaption>
-        </figure>
-      </a>
-    </li>
-
-    <!-- Repeating Template -->
-    <li class="card-item">
-      <a href="#">
-        <figure class="card">
-          <img src="https://assets.codepen.io/16425/image-placeholder.png" alt="Placeholder">
-          <figcaption class="caption">
-            <h3 class="caption-title">Title</h3>
-            <p>Description Lorem ipsum dolor sit.</p>
-          </figcaption>
-        </figure>
-      </a>
-    </li>
-
-    <!-- Repeating Template -->
-    <li class="card-item">
-      <a href="#">
-        <figure class="card">
-          <img src="https://assets.codepen.io/16425/image-placeholder.png" alt="Placeholder">
-          <figcaption class="caption">
-            <h3 class="caption-title">Title</h3>
-            <p>Description Lorem ipsum dolor sit.</p>
-          </figcaption>
-        </figure>
-      </a>
-    </li>
-
-  </ul>
+   
 </main>
-		  
 </BaseLayout>
 
 	

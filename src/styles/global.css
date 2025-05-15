@@ -2,32 +2,86 @@
 
 /* Header */
 .masthead {
+  font-family: 'Trench Slab', sans-serif;
   text-align: center;
   border-bottom: 1px solid hsl(0, 0%, 90%);
 }
 
 .card-item {
-  width: 300px; 
-  height: 300px; 
+  position: relative;
+  width: 300px;
+  height: 300px;
   border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-  color: black; 
-  padding: 1rem;
-  margin: 10px;
-  text-align: center;
-  display: block; 
+  overflow: hidden;
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.color-swatch {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+/* Overlay with blur and smooth fade */
+.info-overlay {
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(8px);
+  background-color: transparent;
+  color: white;
+  opacity: 0;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+  align-items: center;      
+  text-align: center; 
+  transition: opacity 0.4s ease;
+}
+
+.card-item:hover .info-overlay {
+  opacity: 1;
+}
+
+.caption-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  font-family: 'Trench Slab', serif;
+  color: black
+}
+
+.light-text {
+  color: white;
+}
+
+.info-overlay div {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  margin-bottom: 6px;
+  font-family: 'General Sans', sans-serif;
 }
 
 
 .card-item h1 {
+  font-family: 'Trench Slab', sans-serif;
+  text-align: center;
   font-size: 1.5rem;
   margin-bottom: 10px;
 } 
 
 .card-item div {
-  display: block;       /* Forces each to be on its own line */
-  margin: 5px 0;        /* Adds spacing between each item */
-  font-size: 1rem;      /* Makes text a little smaller than the title */
+  font-family: 'General Sans', sans-serif;
+  display: block;       
+  margin: 5px 0;       
+  font-size: 1rem;      
 }
 
 main {
@@ -35,6 +89,10 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2em;
   justify-content: center;
+}
+
+.title {
+  font-weight: 600;
 }
 
 

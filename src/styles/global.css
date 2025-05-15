@@ -9,15 +9,25 @@
 .card-item {
   width: 300px; 
   height: 300px; 
-  display: flex; 
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px; 
+  border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-  color: white; 
+  color: black; 
+  padding: 1rem;
+  margin: 10px;
   text-align: center;
-  font-size: 1.2em;
-  font-weight: bold;
+  display: block; 
+}
+
+
+.card-item h1 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+} 
+
+.card-item div {
+  display: block;       /* Forces each to be on its own line */
+  margin: 5px 0;        /* Adds spacing between each item */
+  font-size: 1rem;      /* Makes text a little smaller than the title */
 }
 
 main {
@@ -27,78 +37,7 @@ main {
   justify-content: center;
 }
 
-/*--------------------------------------------------------------
-Cards:
---------------------------------------------------------------*/
 
-.cards {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
 
-.caption {
-  padding: 1em;
-  background: hsla(246, 40%, 30%, 0.6);
-  color: white;
-  font-size: 1.2em;
-  transition: all 0.4s;
-}
 
-a:focus .caption,
-a:hover .caption {
-  background: hsla(246, 40%, 30%, 1);
-}
 
-.caption-title {
-  margin: 0;
-  font-size: 1.4em;
-  line-height: 1.1em;
-}
-
-/*--------------------------------------------------------------
-CSS Grid layout for wider screens, when browser supports grid:
---------------------------------------------------------------*/
-@media screen and (min-width: 30em) {
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1em;
-  }
-
-  .cards a {
-    margin-bottom: 0;
-  }
-
-  .card {
-    display: grid;
-  }
-
-  .card img,
-  .caption {
-    grid-column: 1;
-    grid-row: 1;
-  }
-
-  .caption {
-    display: flex;
-    flex-direction: column;
-    opacity: 0;
-
-    /* Alignment */
-    /*     align-items: flex-end; */
-    /*     justify-content: flex-end; */
-  }
-
-  a:focus .caption,
-  a:hover .caption {
-    background: hsla(246, 40%, 30%, 0.6);
-    opacity: 1;
-  }
-}
-
-@media screen and (min-width: 60em) {
-  .cards {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}

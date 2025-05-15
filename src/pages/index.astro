@@ -21,14 +21,18 @@ console.log(data);
 		<Header />
 		
     <main id="content" class="main-area">
-       <div>Color Name</div>
+       
 		  
 				<!-- Your API Data -->
         
          {
 					data.colors.map(color => (
 					<div class="card-item" style={`background-color: #${color.hex};`}>
-            <h3 class="caption-title">{color.name}</h3>
+            <h1 class="caption-title">{color.name}</h1>
+			<div>Theme: {color.theme}	</div>
+			<div>Group: {color.group} </div>
+			<div>Hex: #{color.hex} </div>
+			<div>RGB: {color.rgb} </div>
 					</div> 
 				))
 					}

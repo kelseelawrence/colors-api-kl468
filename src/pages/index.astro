@@ -29,13 +29,13 @@ console.log(data);
          {
 					data.colors.map(color => (
 					<div class="card-item" style={`background-color: #${color.hex};`}>
-						
-            <h1 class={`caption-title ${color.theme === 'dark' ? 'light-text' : ''}`}>{color.name}</h1>
+					<h1 class={`caption-title ${color.theme === 'dark' ? 'light-text' : ''}`}>{color.name}</h1>
 			<div class="info-overlay" style={`color: ${color.theme === 'dark' ? 'white' : 'black'};`}>
-			<div><span class="title">Theme:</span> {color.theme}	</div>
-			<div><span class="title">Group:</span> {color.group} </div>
-			<div><span class="title">Hex:</span> #{color.hex} </div>
-			<div><span class="title">RGB:</span> {color.rgb} </div>
+		    <h1> {color.name}	</h1>
+			<p><span class="title">Theme:</span> {color.theme}	</p>
+			<p><span class="title">Group:</span> {color.group} </p>
+			<p><span class="title">Hex:</span> #{color.hex} </p>
+			<p><span class="title">RGB:</span> {color.rgb} </p>
 					</div> 
 					</div>
 				))
